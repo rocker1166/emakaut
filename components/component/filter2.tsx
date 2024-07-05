@@ -11,7 +11,7 @@ const Filter2: React.FC = () => {
 					</svg>
 				</div>
 
-				<input type="text" placeholder="Search by listing, location, bedroom number..." className="px-8 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" />
+				<input type="text" placeholder="1st year math, 2nd year english notes......." className="px-8 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" />
 			</div>
 
 			<div className="flex items-center justify-between mt-4">
@@ -26,61 +26,47 @@ const Filter2: React.FC = () => {
 
 			<div>
 				<div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
-					<select title="1" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">All Type</option>
-						<option value="for-rent">For Rent</option>
-						<option value="for-sale">For Sale</option>
+					<select title="1" defaultValue="1st" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+
+						<option value="1st">1st</option>
+						<option value="2nd">2nd</option>
+						<option value="3rd">3rd</option>
+						<option value="4th">4th</option>
+					</select> 
+
+					<select title="1" defaultValue="CSE" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+						<option value="CSE">CSE </option>
+						<option value="IT">IT</option>
+						<option value="ECE">ECE</option>
+						<option value="E.E">E.E</option>
 					</select>
 
-					<select title="1" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">Furnish Type</option>
-						<option value="fully-furnished">Fully Furnished</option>
-						<option value="partially-furnished">Partially Furnished</option>
-						<option value="not-furnished">Not Furnished</option>
-					</select>
 
-					<select title="4" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">Any Price</option>
-						<option value="1000">RM 1000</option>
-						<option value="2000">RM 2000</option>
-						<option value="3000">RM 3000</option>
-						<option value="4000">RM 4000</option>
-					</select>
-
-					<select title="4" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">Floor Area</option>
-						<option value="200">200 sq.ft</option>
-						<option value="400">400 sq.ft</option>
-						<option value="600">600 sq.ft</option>
-						<option value="800 sq.ft">800</option>
-						<option value="1000 sq.ft">1000</option>
-						<option value="1200 sq.ft">1200</option>
-					</select>
-
-					<select title="1" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">Bedrooms</option>
-						<option value="1">1 bedroom</option>
-						<option value="2">2 bedrooms</option>
-						<option value="3">3 bedrooms</option>
-						<option value="4">4 bedrooms</option>
-						<option value="5">5 bedrooms</option>
+					<select title="4" defaultValue="Math" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+					    <option value="">Subject</option>
+						<option value="Math">Math</option>
+						<option value="Physics">Physics</option>
+						<option value="Chemistry">Chemistry</option>
+						<option value="English">English</option>
 					</select>
 
 					<select title="4" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">Bathrooms</option>
-						<option value="1">1 bathroom</option>
-						<option value="2">2 bathrooms</option>
-						<option value="3">3 bathrooms</option>
-						<option value="4">4 bathrooms</option>
-						<option value="5">5 bathrooms</option>
+						<option value="">Content Type</option>
+						<option value="ebook">E-book</option>
+						<option value="youtube">Youtube Playlilst</option>
+						<option value="notes">Notes</option>
+						<option value="question">Question Bank</option>
 					</select>
 
 					<select title="1" className="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-						<option value="">Bathrooms</option>
-						<option value="1">1 space</option>
-						<option value="2">2 space</option>
-						<option value="3">3 space</option>
+						<option value="">Price</option>
+						<option value="Free">Free</option>
+						<option value="paid">Paid</option>
 					</select>
+
+					
+
+					
 				</div>
 			</div>
 		</div>

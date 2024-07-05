@@ -65,7 +65,7 @@ export function Dashboard() {
     <div className=" items-center flex min-h-screen flex-col ">
       <main className=" gap-7 ">
         <section className="w-full py-6 sm:py-12 md:py-16 lg:py-20 xl:py-24 ">
-          <div className="container px-4 md:px-6 items-center justify-between">
+          <div className="container px-4 md:px-6 items-center relative  justify-between w-full ">
 
             
 
