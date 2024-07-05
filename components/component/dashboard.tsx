@@ -26,8 +26,8 @@ To read more about using these font, please visit the Next.js documentation:
 import Link from "next/link"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import Filter2 from "./filter2"
 
 export function Dashboard() {
   return (
@@ -67,70 +67,12 @@ export function Dashboard() {
         <section className="w-full py-6 sm:py-12 md:py-16 lg:py-20 xl:py-24 ">
           <div className="container px-4 md:px-6 items-center justify-between">
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 bg-slate-500 rounded-md  text-black">
-              <Tabs defaultValue="articles ">
-                <TabsList className="flex gap-4 sm:gap-6">
-                  <TabsTrigger  value="1">1st Year</TabsTrigger>
-                  <TabsTrigger value="2">2nd Year</TabsTrigger>
-                  <TabsTrigger value="3">3rd Year</TabsTrigger>
-                  <TabsTrigger value="4">4th Year</TabsTrigger>
-                </TabsList>
-              </Tabs>
-              <div className="flex gap-2 mt-4 sm:mt-0">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm">
-                      Course <ChevronDownIcon className="w-4 h-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem>Cse</DropdownMenuItem>
-                    <DropdownMenuItem>IT</DropdownMenuItem>
-                    <DropdownMenuItem>ECE</DropdownMenuItem>
-                    <DropdownMenuItem>CSE(A.I)</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm">
-                      Subject <ChevronDownIcon className="w-4 h-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem>Math</DropdownMenuItem>
-                    <DropdownMenuItem>Physics</DropdownMenuItem>
-                    <DropdownMenuItem>Chemistry</DropdownMenuItem>
-                    <DropdownMenuItem>English</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm">
-                      Material <ChevronDownIcon className="w-4 h-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem>E-book</DropdownMenuItem>
-                    <DropdownMenuItem>Youtube Playlist</DropdownMenuItem>
-                    <DropdownMenuItem>Notes</DropdownMenuItem>
-                    <DropdownMenuItem>Question Bank</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm">
-                      Content type <ChevronDownIcon className="w-4 h-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem> Free 🆓</DropdownMenuItem>
-                    <DropdownMenuItem>Paid 💵</DropdownMenuItem>
-                   
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-            </div>
+            
 
+
+<Filter2 />
+
+          
 
 
             <div className="grid  gap-7   sm:grid-cols-4 md:gap-3  justify-between content-between ">
@@ -155,133 +97,7 @@ export function Dashboard() {
                   </div>
                 </CardFooter>
               </Card>
-              <Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
               
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card><Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card><Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card><Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card><Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card><Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card><Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card>
               
              
             </div>
