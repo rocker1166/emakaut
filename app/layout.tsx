@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-
+import { ConvexClientProvider } from "./ConvexClientProvider";
 const fontHeading = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -33,7 +33,7 @@ export default function RootLayout({
         fontBody.variable
       )}
     >
-      {children}
+     <ConvexClientProvider>  {children}</ConvexClientProvider>
     </body>
   </html>
   );

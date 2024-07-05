@@ -23,13 +23,17 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
+"use client"
 import Link from "next/link"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import Filter2 from "./filter2"
-
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api"
 export function Dashboard() {
+  const res = useQuery(api.content.get);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
      
@@ -78,27 +82,27 @@ export function Dashboard() {
             <div className="grid  gap-7   sm:grid-cols-4 md:gap-3  justify-between content-between ">
               
               
-              <Card className="bg-secondary  ">
-                <CardHeader>
-                  <CardTitle>
-                    <Link href="#" className="text-secondary-foreground" prefetch={false}>
-                      The Future of Web Development
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-secondary-foreground">
-                    Exploring the latest trends and technologies shaping the web development landscape.
-                  </CardDescription>
-                </CardHeader>
-              
-                <CardFooter>
-                  <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>June 1, 2023</span>
-                  </div>
-                </CardFooter>
-              </Card>
-              
-              
+            
+
+  
+      {res?.map((data, index) => (
+        <Link
+          key={index}
+          href={data.url}
+          className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        >
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {data.title}
+          </h5>
+          <p className="font-normal text-gray-700 dark:text-gray-400">
+            {data.description}
+          </p>
+          <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+            {data.tag}
+          </span>
+        </Link>
+      ))}
+           
              
             </div>
            

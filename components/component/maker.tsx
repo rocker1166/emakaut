@@ -11,7 +11,7 @@ const content = [
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
       <Image
-          src="https://static01.nyt.com/images/2019/03/10/style/02momo-1/02momo-1-videoSixteenByNineJumbo1600.jpg"
+          src="https://w7.pngwing.com/pngs/59/826/png-transparent-meme-illustration-rage-comic-internet-troll-internet-meme-cartoon-comics-troll-face-meme-miscellaneous-ink-monochrome-thumbnail.png"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -59,11 +59,11 @@ const content = [
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         <Image
-          src="https://static01.nyt.com/images/2019/03/10/style/02momo-1/02momo-1-videoSixteenByNineJumbo1600.jpg"
+          src="https://w7.pngwing.com/pngs/59/826/png-transparent-meme-illustration-rage-comic-internet-troll-internet-meme-cartoon-comics-troll-face-meme-miscellaneous-ink-monochrome-thumbnail.png"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo"
+          alt="yoo"
         />
       </div>
     ),
