@@ -29,63 +29,86 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import Filter2 from "./filter2"
+import { useState } from "react"
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api"
+import { XIcon, MenuIcon } from "lucide-react"
 export function Dashboard() {
   const res = useQuery(api.content.get);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="flex flex-col min-h-[100dvh]">
      
-     
-     
-     
-      <header className="px-2 lg:px-6 h-14 flex items-center fixed top-0 w-full text-white  shadow-md border-b backdrop-blur-xl ring-offset-purple-500 rounded-lg ">
+     <header className="bg-black text-white px-4 lg:px-6 h-14 flex items-center shadow-md opacity-95 font-bold text-2xl fixed top-0 w-full z-10">
         <Link href="/" className="flex items-center justify-center" prefetch={false}>
-          <MountainIcon className="h-6 w-6 font-extrabold" />
-          <span className="sr-only">Acme Blog</span>
+          <MountainIcon className="h-6 w-6 mr-2" />
+          <span>Academy</span>
         </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6"> 
-          <Link href="/" className="text-md  font-bold hover:underline underline-offset-4" prefetch={false}>
-            Home
+        <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
+          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+            Courses
           </Link>
-          <Link href="/blog" className="text-md font-bold hover:underline underline-offset-4" prefetch={false}>
-            Articles
-          </Link>
-          <Link href="/doc" className="text-md font-bold hover:underline underline-offset-4" prefetch={false}>
-            Tutorials
-          </Link>
-          
-          <Link href="/about" className="text-sm font-bold hover:underline underline-offset-4" prefetch={false}>
+          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
             About
           </Link>
+          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+            Instructors
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+            Contact
+          </Link>
         </nav>
+        <button
+          className="md:hidden ml-auto focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? (
+            <XIcon className="h-6 w-6" />
+          ) : (
+            <MenuIcon className="h-6 w-6" />
+          )}
+        </button>
       </header>
+      {isMenuOpen && (
+        <nav className="bg-black relative backdrop-blur-md text-white fixed top-14 left-0 w-full flex flex-col items-center md:hidden">
+          <Link href="#" className="py-2 text-sm font-medium hover:underline" prefetch={false}>
+            Courses
+          </Link>
+          <Link href="#" className="py-2 text-sm font-medium hover:underline" prefetch={false}>
+            About
+          </Link>
+          <Link href="#" className="py-2 text-sm font-medium hover:underline" prefetch={false}>
+            Instructors
+          </Link>
+          <Link href="#" className="py-2 text-sm font-medium hover:underline" prefetch={false}>
+            Contact
+          </Link>
+        </nav>
+      )}
 
+      
+      <div className=" m-16 ">
+     <Filter2 />
+     </div>
 
 
 
       
     <div className=" items-center flex min-h-screen flex-col ">
-      <main className=" gap-7 ">
-        <section className="w-full py-6 sm:py-12 md:py-16 lg:py-20 xl:py-24 ">
-          <div className="container px-4 md:px-6 items-center relative  justify-between w-full ">
+      <main className=" ">
+        
+         
 
             
 
 
-<Filter2 />
+
 
           
 
 
-            <div className="grid  gap-7   sm:grid-cols-4 md:gap-3  justify-between content-between ">
-              
-              
-            
-
-  
-      {res?.map((data, index) => (
+            <div className="grid  gap-7    sm:grid-cols-6 md:gap-3  justify-between content-between ">
+      {res?.map((data:any, index:any) => (
         <Link
           key={index}
           href={data.url}
@@ -98,16 +121,14 @@ export function Dashboard() {
             {data.description}
           </p>
           <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
-            {data.tag}
+            {data.tag[1]}
           </span>
         </Link>
-      ))}
-           
-             
+      ))} 
             </div>
            
-          </div>
-        </section>
+          
+       
       </main>
     </div>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-slate-100 text-black">
@@ -179,3 +200,7 @@ function MountainIcon(props:any) {
     </svg>
   )
 }
+
+
+
+

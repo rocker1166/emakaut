@@ -11,7 +11,7 @@ const content = [
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
       <Image
-          src="https://w7.pngwing.com/pngs/59/826/png-transparent-meme-illustration-rage-comic-internet-troll-internet-meme-cartoon-comics-troll-face-meme-miscellaneous-ink-monochrome-thumbnail.png"
+          src=""
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -27,7 +27,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="https://w7.pngwing.com/pngs/59/826/png-transparent-meme-illustration-rage-comic-internet-troll-internet-meme-cartoon-comics-troll-face-meme-miscellaneous-ink-monochrome-thumbnail.png"
+          src=""
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -43,7 +43,7 @@ const content = [
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
          <Image
-          src="https://i1.sndcdn.com/artworks-htPrc1EwFiDJ5CG9-Gz7fQg-t500x500.jpg"
+          src=""
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -59,7 +59,7 @@ const content = [
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         <Image
-          src="https://w7.pngwing.com/pngs/59/826/png-transparent-meme-illustration-rage-comic-internet-troll-internet-meme-cartoon-comics-troll-face-meme-miscellaneous-ink-monochrome-thumbnail.png"
+          src=""
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -72,7 +72,7 @@ const content = [
 export function Maker() {
   return (
     <div className="p-10">
-      <h1 className=" text-center items-center text-3xl font-heading text-red-700">About US</h1>
+      <h1 className=" text-center items-center text-3xl font-heading text-white">About US</h1>
       <StickyScroll content={content} />
     </div>
   );
