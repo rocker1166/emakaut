@@ -9,6 +9,7 @@ import { Maker } from "./maker"
 import { Esource } from "./material"
 import { useState } from "react";
 import { AuroraBackground } from "../ui/aurora-background";
+import Badge from "./badge";
 export default function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -62,8 +63,9 @@ export default function Hero() {
 
 
       <main className=" bg-gradient-to-r from-sky-500 to-indigo-500  flex-1 mt-14">
-       
+      
       <AuroraBackground>
+      
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,15 +74,17 @@ export default function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="  items-center content-center "
       >
-        <section className="w-full  py-12 md:py-24 lg:py-32">
-          <div className="container mx-auto grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-            <div className="space-y-4">
-              <h1 className="text-4xl text-red-600 font-bold tracking-tighter sm:text-5xl md:text-6xl">
+        
+       
+       
+          <div className="container   grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+            <div className=" gap-5 p-10 ">
+              <h1 className="text-4xl py-8 text-red-600 font-bold tracking-tighter sm:text-5xl md:text-6xl">
                 Unlock Your Potential with Our Academy
               </h1>
-              <p className="max-w-lg text-white md:text-xl lg:text-base xl:text-xl">
+              <p className="max-w-lg py-5 text-white md:text-xl lg:text-base xl:text-xl">
                 Discover a world of knowledge and skills at our academy. Enroll in our top-rated courses and embark on a transformative learning journey.
               </p>
               <Link
@@ -91,19 +95,17 @@ export default function Hero() {
                 Get Started
               </Link>
             </div>
-            <Image
-              src="https://educationnorthwest.org/sites/default/files/graphics/lesson-study-resources.png"
-              width={800}
-              height={500}
-              alt="Hero"
-              className="mx-auto rounded-xl object-cover sm:w-full lg:order-last"
-            />
+         
+            <Badge /> 
+           
+            <div/>
           </div>
-        </section>
+        
+        
         
         </motion.div>
         </AuroraBackground>
-        <section className="py-12">
+        <section className="py-12 ">
           <h1 className="text-white font-heading text-4xl text-center mb-8">Study Resources</h1>
           <Esource />
         </section>

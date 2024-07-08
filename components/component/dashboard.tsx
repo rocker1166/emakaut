@@ -70,7 +70,7 @@ export function Dashboard() {
         </button>
       </header>
       {isMenuOpen && (
-        <nav className="bg-black relative backdrop-blur-md text-white fixed top-14 left-0 w-full flex flex-col items-center md:hidden">
+        <nav className="bg-black relative backdrop-blur-md text-white  top-14 left-0 w-full flex flex-col items-center md:hidden">
           <Link href="#" className="py-2 text-sm font-medium hover:underline" prefetch={false}>
             Courses
           </Link>
